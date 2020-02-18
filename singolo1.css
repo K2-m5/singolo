@@ -1,0 +1,120 @@
+html {
+    font-size: 10px; /*Относительное значение размера шрифта для всей страницы
+    /Relative font size value for the entire page*/
+    box-sizing: border-box; /*Присваеваем свойство border-box всем элементам и псевдоэлементам до/после
+    /Assign the border-box property to all elements and pseudo-elements before/after*/  
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+    /*Наследуем свойство border-box из родителя, можно переопределить значение в плагине
+    /Inheriting the border-box property from the parent, you can override the value in the plugin*/  
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 1.6rem;
+    background-color: #fefefe;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* HEADER */
+
+.header {
+    padding: 34px 0 30px;
+    background-color: #2d303a;
+    border-bottom: solid 6px #323746;
+}
+
+.header_wrapper {
+    display: flex; 
+    justify-content: space-between; 
+    /*Флексы равномерно распределяются по всей строке. 
+    Первый и последний элемент прижимаются к соответствующим краям контейнера.
+    The flexes are evenly distributed across the entire line. 
+    The first and last elements are pressed against the corresponding edges of the container.*/
+    align-items: baseline; 
+    /*Флексы выравниваются по их базовой линии.
+    Flexes are aligned to their baseline.
+    */
+}
+
+.header_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.55px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header_title span {
+    color: #f06c64;
+}
+
+.nav_list {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    color: #fff;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.nav_list_item {
+    margin-right: 29px;
+    cursor: pointer;
+    transition: color .2s linear;
+    position: relative;
+}
+
+.nav_list_item::after {
+    content: "";
+    background-color: #434759;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    right: -16px;
+
+    transform: translateY(-50%);
+}
+
+.nav_list_item:hover {
+    color: #f06c64;
+    text-decoration: underline;
+}
+
+.nav_list_item:last-child {
+    margin-right: 0;
+}
+
+.nav_list_item:last-child::after {
+    width: 0;
+}
+
+.nav_list_item-first {
+    color: #f06c64;
+}
