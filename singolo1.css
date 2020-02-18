@@ -44,7 +44,7 @@ ul {
     border-bottom: solid 6px #323746;
 }
 
-.header_wrapper {
+.header_wrap {
     display: flex; 
     justify-content: space-between; 
     /*Флексы равномерно распределяются по всей строке. 
@@ -118,3 +118,17 @@ ul {
 .nav_list_item-first {
     color: #f06c64;
 }
+
+.slider{
+    padding: 34px 0 30px;
+    background-color: #f06c64;
+    height: 600px;
+    border-bottom: solid 15px #ea676b;
+}
+
+.slider_wrap {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
