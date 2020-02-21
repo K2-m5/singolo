@@ -119,6 +119,8 @@ ul {
     color: #f06c64;
 }
 
+/*Slider*/
+
 .slider{
     padding: 34px 0 30px;
     background-color: #f06c64;
@@ -127,8 +129,45 @@ ul {
 }
 
 .slider_wrap {
+    position: relative;
     display: flex; 
-    justify-content: space-between; 
+    justify-content: space-around; 
     align-items: center; 
 }
 
+.iphone_ver {
+    display: block;
+}
+
+.iphone_hor {
+    display: block;
+
+}
+
+.arrow_left {
+    position: absolute;
+    top: 51%;
+    left: 2px;
+    cursor: pointer;
+}
+
+.arrow_right {
+    position: absolute;
+    top: 51%;
+    right: 0;
+    cursor: pointer;
+}
+
+/*services*/
+
+.services{
+    background-color: #f2f2f2;
+}
+
+.services_wrap{
+    display: flex;
+}
+
+.services_item {
+    width: 320px;
+}
