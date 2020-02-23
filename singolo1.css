@@ -33,7 +33,7 @@ ul {
     width: 100%;
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 /* HEADER */
@@ -45,7 +45,7 @@ ul {
 }
 
 .header_wrap {
-    display: flex; 
+    display: flex;
     justify-content: space-between; 
     /*Флексы равномерно распределяются по всей строке. 
     Первый и последний элемент прижимаются к соответствующим краям контейнера.
@@ -55,6 +55,7 @@ ul {
     /*Флексы выравниваются по их базовой линии.
     Flexes are aligned to their baseline.
     */
+    padding: 0 10px;
 }
 
 .header_title {
@@ -122,7 +123,7 @@ ul {
 /*Slider*/
 
 .slider{
-    padding: 34px 0 30px;
+    padding: 53px 0 30px;
     background-color: #f06c64;
     height: 600px;
     border-bottom: solid 15px #ea676b;
@@ -130,30 +131,33 @@ ul {
 
 .slider_wrap {
     position: relative;
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .iphone_ver {
     display: block;
+    padding-left: 22px;
+    /* padding-right: 35px; */
 }
 
 .iphone_hor {
     display: block;
-
+    padding-right: 22px;
 }
 
 .arrow_left {
     position: absolute;
-    top: 51%;
+    top: 47%;
     left: 2px;
     cursor: pointer;
 }
 
 .arrow_right {
     position: absolute;
-    top: 51%;
+    top: 47%;
     right: 0;
     cursor: pointer;
 }
@@ -161,13 +165,36 @@ ul {
 /*services*/
 
 .services{
+    height: 495px;
     background-color: #f2f2f2;
 }
 
 .services_wrap{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.services_title {
+    padding: 60px 10px 0;
+    font-size: 3rem;
+}
+
+.services_text {
+    padding: 12px 10px 12px;
+    font-size: 1.8rem;
 }
 
 .services_item {
+    display: flex;
     width: 320px;
+}
+
+.services_item_img {
+    height: 61px;
+    width: 61px;
+    margin: 0px 10px;
+}
+
+.services_item_text {
+    margin: 0px 10px;
 }
