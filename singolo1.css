@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Black.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Light.ttf');
+    font-weight: 300;
+}
+
 html {
     font-size: 10px; /*Относительное значение размера шрифта для всей страницы
     /Relative font size value for the entire page*/
@@ -6,14 +24,14 @@ html {
 }
 
 *, *:before, *:after {
-    box-sizing: inherit; 
+    box-sizing: inherit;
     /*Наследуем свойство border-box из родителя, можно переопределить значение в плагине
-    /Inheriting the border-box property from the parent, you can override the value in the plugin*/  
+    /Inheriting the border-box property from the parent, you can override the value in the plugin*/
 }
 
 body {
     margin: 0;
-    font-family: 'Lato Regular', sans-serif;
+    font-family: "Lato";
     font-size: 1.6rem;
     background-color: #fefefe;
 }
@@ -22,9 +40,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-ul {
-    margin: 0; 
-    padding: 0; 
+ul, p {
+    margin: 0;
+    padding: 0;
 }
 
 /* Container */
@@ -60,9 +78,10 @@ ul {
 
 .header_title {
     font-size: 2.5rem;
+    font-family: "Lato";
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -.55px;
+    letter-spacing: -.5px;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
@@ -76,7 +95,7 @@ ul {
     display: flex;
     font-size: 1.2rem;
     font-weight: 700;
-
+    font-family: "Lato";
     color: #fff;
     list-style: none;
     text-transform: uppercase;
@@ -123,9 +142,8 @@ ul {
 /*Slider*/
 
 .slider{
-    padding: 53px 0 30px;
+    padding: 53px 0 45px;
     background-color: #f06c64;
-    height: 600px;
     border-bottom: solid 15px #ea676b;
 }
 
@@ -139,27 +157,26 @@ ul {
 
 .iphone_ver {
     display: block;
-    padding-left: 22px;
-    /* padding-right: 35px; */
+    padding-left: 36px;
 }
 
 .iphone_hor {
     display: block;
-    padding-right: 22px;
+    padding-right: 34px;
 }
 
-.arrow_left {
+.arrow {
     position: absolute;
-    top: 47%;
-    left: 2px;
+    top: calc(50% - 16px);
     cursor: pointer;
 }
 
 .arrow_right {
-    position: absolute;
-    top: 47%;
-    right: 0;
-    cursor: pointer;
+    right: 10px;
+}
+
+.arrow_left {
+    left: 11px;
 }
 
 /*services*/
@@ -172,21 +189,33 @@ ul {
 .services_wrap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 33px 0px 0px;
 }
 
 .services_title {
-    padding: 60px 10px 0;
+    padding: 62px 10px 0;
     font-size: 3rem;
+    line-height: 1;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
 }
 
 .services_text {
-    padding: 12px 10px 12px;
+    padding: 22px 10px 12px;
     font-size: 1.8rem;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
 }
 
 .services_item {
     display: flex;
     width: 320px;
+    height: 122px;
 }
 
 .services_item_img {
@@ -196,5 +225,23 @@ ul {
 }
 
 .services_item_text {
-    margin: 0px 10px;
+    padding: 0px 10px;
+    font-family: "Lato";
+}
+
+.services_item_text h3 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #666d89;
+
+    font-weight: 900;
+    text-align: left;
+}
+
+.services_item_text p {
+    padding-top: 10px;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: #767e9e;
+    font-weight: 400;
 }
