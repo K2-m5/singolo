@@ -52,7 +52,7 @@ h2 {
     margin: auto;
 }
 
-.portfolio__wrapper{
+.portfolio-wrapper{
     background-color: #2d303a;
     padding: 6.3rem 0rem 4.7rem;
     border-bottom: 0.6rem solid #323746;
@@ -77,7 +77,7 @@ h2 {
     padding: 0 4rem 2rem 4rem;
 }
 
-.portfolio__button {
+.portfolio-button {
     margin-right: 1rem;
     padding: 0 0.6rem;
     font-family: 'Lato', sans-serif;
@@ -93,12 +93,12 @@ h2 {
     outline: none;
 }
 
-.portfolio__button:hover {
+.portfolio-button:hover {
     border-color: #c5c5c5;
     color: #c5c5c5;
 }
 
-.portfolio__button__first {
+.portfolio-button-first {
     color: #c5c5c5;
     border: 0.1rem solid #c5c5c5;
 }
@@ -122,17 +122,17 @@ h2 {
 
 /*about-us*/
 
-.about-us__wrapper {
+.about-us-wrapper {
     background-color: #f2f2f2;
     padding: 6.2rem 4rem;
     border-bottom: 0.6rem solid #ffffff;
 }
 
-.about-us__tittle {
+.about-us-tittle {
     margin: 0;
 }
 
-.about-us__subtitle {
+.about-us-subtitle {
     margin: 2rem 0 3rem;
     padding: 0rem 0rem 1.5rem;
     font-size: 1.8rem;
@@ -141,7 +141,7 @@ h2 {
     color: #767e9e;
 }
 
-.about-us__persons{
+.about-us-persons{
     display: flex;
 }
 
@@ -162,7 +162,7 @@ h2 {
     height: auto;
 }
 
-.person__name {
+.person-name {
     margin: 1.7rem 0 1rem;
     letter-spacing: -0.2px;
     text-overflow: ellipsis;
@@ -170,7 +170,7 @@ h2 {
     white-space: nowrap;
 }
 
-.person__resume {
+.person-resume {
     margin: 0rem;
     font-size: 1.2rem;
     line-height: 2.1rem;
@@ -181,7 +181,7 @@ h2 {
     letter-spacing: -0.09px;
 }
 
-.person__social-media {
+.person-social-media {
     display: flex;
     margin: 2.4rem 0rem 0.1rem;
     cursor: pointer;
@@ -193,6 +193,6 @@ h2 {
     max-width: 3.2rem;
 }
 
-.person__social-media:last-child {
+.person-social-media:last-child {
     margin-right: 0;
 }
