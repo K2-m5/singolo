@@ -64,10 +64,38 @@ h2 {
     padding: 0.5rem 4rem 1.5rem;
     font-size: 1.8rem;
     letter-spacing: -0.2px;
+    color: #767e9e;
 }
 
 .portfolio-block-button{
+    display: flex;
     padding: 0 4rem 2rem 4rem;
+}
+
+.portfolio__button {
+    margin-right: 7px;
+    padding: 0px 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+    color: #666d89;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    background-color: #2d303a;
+    cursor: pointer;
+    transition: border-color .2s linear, color .2s linear;
+    outline: none;
+}
+
+.portfolio__button:hover {
+    border-color: #c5c5c5;
+    color: #c5c5c5;
+}
+
+.portfolio__button__first {
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
 }
 
 .portfolio-work {
