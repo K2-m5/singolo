@@ -38,12 +38,14 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    line-height: 18px;
+    line-height: 2rem;
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
     text-align: left;
 }
+
+/*portfolio*/
 
 .wrapper {
     max-width: 1020px;
@@ -53,6 +55,7 @@ h2 {
 .portfolio__wrapper{
     background-color: #2d303a;
     padding: 4.5rem 0rem;
+    border-bottom: 0.6rem #323746;
 }
 
 .portfolio-tittle {
@@ -73,7 +76,7 @@ h2 {
 }
 
 .portfolio__button {
-    margin-right: 7px;
+    margin-right: 10px;
     padding: 0px 6px;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
@@ -119,4 +122,72 @@ h2 {
 
 .about-us__wrapper {
     background-color: #f2f2f2;
+    padding: 7.5rem 4rem;
+    border-bottom: 0.6rem #ffffff;
+}
+
+.about-us__tittle {
+    margin: 0;
+}
+
+.about-us__subtitle {
+    margin-bottom: 3rem;
+    padding: 1rem 0rem 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.08px;
+    line-height: 3rem;
+    color: #767e9e;
+}
+
+.about-us__persons{
+    display: flex;
+}
+
+.person {
+    display: block;
+    width: 33.3%;
+    margin-right: 2rem;
+    overflow: auto;
+}
+
+.person:last-child {
+    margin-right: 0;
+}
+
+.person-foto {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.person__name {
+    margin: 1.5rem 0 0.9rem;
+    letter-spacing: -0.2px;
+}
+
+.person__resume {
+    margin: 0rem;
+    font-size: 1.2rem;
+    line-height: 2.15rem;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: -0.09px;
+}
+
+.person__social-media {
+    display: flex;
+    margin: 2.4rem 0rem;
+    cursor: pointer;
+    transition: border-color .2s linear, color .2s linear;
+}
+
+.social-media-icon {
+    margin: 0 0.85rem 0 0;
+    max-width: 32px;
+}
+
+.person__social-media:last-child {
+    margin-right: 0;
 }
