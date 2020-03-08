@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 /* question*/
 
 .question-wrapper {
-    padding: 6.2rem 4rem 5.1rem;
+    padding: 6.2rem 4rem 1.3rem;
     background-color: #f06c64;
     border-bottom: 0.6rem solid #ea676b;
 }
@@ -70,6 +70,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: flex;
     justify-content: space-between;
 }
+
+/*contact form*/
+
 .contact-block-form {
     width: 66.6%;
     padding-right: 0.7rem;
@@ -121,6 +124,35 @@ textarea::placeholder {
     font-weight: 400;
 }
 
+.block-form-button {
+    max-width: 25rem;
+    display: block;
+    cursor: pointer;
+    padding: 1.15rem 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #d6564f;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+}
+
+.block-form-button:hover {
+    background-color: #ce524c;
+    transition: .2s;
+}
+
+.block-form-button:active {
+    background-color: #b84641;
+    transition: .2s;
+}
+
+
+/*contact information*/
+
 .contact-information {
     width: 33.3%;
 }
@@ -134,16 +166,15 @@ textarea::placeholder {
 }
 
 .contact-information-subtitle {
-
-padding: 1rem 0rem 1.3rem 1.3rem;
-max-width: 30rem;
-font-family: "Lato";
-font-size: 1.2rem;
-font-weight: 400;
-text-align: left;
-line-height: 2.2rem;
-letter-spacing: 0.1px;
-color: #f0d8d9;
+    padding: 1rem 0rem 1.3rem 1.3rem;
+    max-width: 30rem;
+    font-family: "Lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 2.2rem;
+    letter-spacing: 0.1px;
+    color: #f0d8d9;
 }
 
 .contact-information-list {
