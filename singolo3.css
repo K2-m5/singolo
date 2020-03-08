@@ -27,7 +27,7 @@ html {
 }
 
 body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul, li {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -42,8 +42,9 @@ h1, h2, h3, h4, h5, h6, p {
 /* question*/
 
 .question-wrapper {
-    padding: 6.2rem 4rem;
+    padding: 6.2rem 4rem 5.1rem;
     background-color: #f06c64;
+    border-bottom: 0.6rem solid #ea676b;
 }
 
 .question-title {
@@ -55,15 +56,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .question-subtitle {
-    margin: 2.2rem 0 4rem;
-
+    margin: 2.2rem 0 4.3rem;
     font-family: "Lato";
     font-size: 1.8rem;
     font-weight: 300;
     text-align: left;
     line-height: 3rem;
     letter-spacing: 0.15px;
-
     color: #f0d8d9;
 }
 
@@ -78,11 +77,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 input {
     display: block;
-    padding: 12px 15px;
-    margin-bottom: 16px;
+    padding: 1.15rem 1.5rem;
+    margin-bottom: 1.6rem;
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     background-color: #d6564f;
     color: #f48c8f;
     font-family: "Lato";
@@ -91,12 +90,43 @@ input {
     outline: none;
 }
 
+input::placeholder {
+    color: #f48c8f;
+    font-family: "lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+textarea {
+    display: block;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.6rem;
+    resize: none;
+    width: 100%;
+    height: 202px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #d6564f;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #f48c8f;
+    font-family: "lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 .contact-information {
     width: 33.3%;
 }
 
 .contact-information-title {
-    padding: 0.3rem 1.3rem 0;
+    padding: 0 1.3rem;
     font-size: 1.8rem;
     font-family: "Lato";
     text-align: left;
@@ -108,16 +138,111 @@ input {
 padding: 1rem 0rem 1.3rem 1.3rem;
 max-width: 30rem;
 font-family: "Lato";
-
 font-size: 1.2rem;
-
 font-weight: 400;
-
 text-align: left;
-
 line-height: 2.2rem;
-
-letter-spacing: 0.px;
-
+letter-spacing: 0.1px;
 color: #f0d8d9;
 }
+
+.contact-information-list {
+    padding: 1.1rem 1.3rem;
+    list-style: none;
+}
+
+.contact-information-list li a {
+    color: #f0d8d9;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    text-decoration: none;
+}
+
+.information-list-item {
+    margin-bottom: 8px;
+}
+
+.information-list-item.phone-item {
+    margin-bottom: 10px;
+}
+
+.information-list-item-img {
+    display: inline-block;
+    text-align: center;
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+}
+
+/*footer*/
+
+.footer {
+    max-width: 1020px;
+    margin: auto;
+    padding: 2.1rem 4rem 2.2rem;
+    background-color: #2d303a;
+}
+
+.wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    transition: .2s linear;
+}
+
+.social-media-link + .social-media-link {
+    margin-left: 7px;
+}
+
+.social-media-link svg {
+    width: 14px;
+    height: 14px;
+    fill: #666d89;
+}
+
+.social-media-link:hover {
+    border-color: #908ba5;
+}
+
+.social-media-link:active {
+    border-color: #bcbac8;
+}
+
+.social-media-link:hover svg {
+    fill: #908ba5;
+}
+
+.social-media-link:active svg {
+    fill: #bcbac8;
+}
+
+.social-media-footer {
+    display: flex;
+    cursor: pointer;
+    transition: border-color .2s linear, color .2s linear;
+}
+
+.person-social-media:last-child {
+    margin-right: 0;
+}
+
+.copyright {
+    font-family: "Lato";
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 2.1rem;
+    letter-spacing: 0.4px;
+    color: #666d89;
+} 
