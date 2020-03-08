@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Black.ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url('assets/font/Lato-Light.ttf');
+    font-weight: 300;
+}
+
+html {
+    font-size: 10px; 
+    font-family: "Lato";
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    line-height: 1;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: auto;
+}
+
+/* question*/
+
+.question-wrapper {
+    padding: 6.2rem 4rem;
+    background-color: #f06c64;
+}
+
+.question-title {
+    font-family: "Lato";
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: left;
+    color: #f0d8d9;
+}
+
+.question-subtitle {
+    margin: 2.2rem 0 4rem;
+
+    font-family: "Lato";
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 3rem;
+    letter-spacing: 0.15px;
+
+    color: #f0d8d9;
+}
+
+.question-contact {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-block-form {
+    width: 66.6%;
+    padding-right: 0.7rem;
+}
+
+input {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #d6564f;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+}
+
+.contact-information {
+    width: 33.3%;
+}
+
+.contact-information-title {
+    padding: 0.3rem 1.3rem 0;
+    font-size: 1.8rem;
+    font-family: "Lato";
+    text-align: left;
+    color: #f0d8d9;
+}
+
+.contact-information-subtitle {
+
+padding: 1rem 0rem 1.3rem 1.3rem;
+max-width: 30rem;
+font-family: "Lato";
+
+font-size: 1.2rem;
+
+font-weight: 400;
+
+text-align: left;
+
+line-height: 2.2rem;
+
+letter-spacing: 0.px;
+
+color: #f0d8d9;
+}
