@@ -7,24 +7,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="head">
         <div class="wrapper">
             <div class="header_wrap">
                 <h1 class="header_title">Singolo<span>*</span></h1>
-                <nav class="nav">
+                <nav class="nav_bar">
                     <ul id="nav_list">
-                        <li class="first">HOME</li>
-                        <li>SERVICES</li>
-                        <li>PORTFOLIO</li>
-                        <li>ABOUT</li>
-                        <li>CONTACT</li>
+                        <li class="first" data-selector=".header">HOME</li>
+                        <li data-selector=".services">SERVICES</li>
+                        <li data-selector=".portfolio">PORTFOLIO</li>
+                        <li data-selector=".about-us">ABOUT</li>
+                        <li data-selector=".question">CONTACT</li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <script src="script.js"></script>
-    <div class="slider">
+    <section class="slider">
         <div class="wrapper">
             <div class="slider_wrap">
                 <div class="arrow arrow_left">
@@ -41,9 +40,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="services">
+    <section class="services">
         <div class="wrapper">
             <div class="services-wrapper">
                 <h2 class="services_title">Our Services</h2>
@@ -115,53 +114,53 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     <section class="portfolio">
         <div class="wrapper portfolio-wrapper">
             <h1 class="portfolio-tittle">Portfolio</h1>
             <p class="portfolio-subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <div class="portfolio-block-button">
-                <button class="portfolio-button portfolio-button-first">All</button>
-                <button class="portfolio-button">Web Design</button>
-                <button class="portfolio-button">Graphic Design</button>
-                <button class="portfolio-button">Artwork</button>
+            <div class="portfolio_tags">
+                <button class="portfolio_tag active">All</button>
+                <button class="portfolio_tag">Web Design</button>
+                <button class="portfolio_tag">Graphic Design</button>
+                <button class="portfolio_tag">Artwork</button>
             </div>
-            <div class="portfolio-work">
-                    <div class="portfolio-work-img">
+            <div class="portfolio_work">
+                    <div class="portfolio_work_img" data-selector="Web Design">
                         <img src="assets/Image 1.png" alt="our_work" >
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Graphic Design">
                         <img src="assets/Image 2.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Graphic Design">
                         <img src="assets/Image 3.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Artwork">
                         <img src="assets/Image 4.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Web Design">
                         <img src="assets/Image 5.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Graphic Design">
                         <img src="assets/Image 6.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Artwork">
                         <img src="assets/Image 7.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Web Design">
                         <img src="assets/Image 8.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Artwork">
                         <img src="assets/Image 9.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Graphic Design">
                         <img src="assets/Image 10.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Artwork">
                         <img src="assets/Image 11.png" alt="our_work">
                     </div>
-                    <div class="portfolio-work-img">
+                    <div class="portfolio_work_img" data-selector="Graphic Design">
                         <img src="assets/Image 12.png" alt="our_work">
                     </div>
             </div>
@@ -525,5 +524,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

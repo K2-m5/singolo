@@ -103,7 +103,7 @@ h2 {
     border: 0.1rem solid #c5c5c5;
 }
 
-.portfolio-work {
+.portfolio_work {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -112,7 +112,7 @@ h2 {
     padding: 0 4rem;
 }
 
-.portfolio-work-img {
+.portfolio_work_img {
     margin-bottom: 2rem;
 
     max-width: 22rem;

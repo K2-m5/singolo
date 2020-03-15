@@ -43,6 +43,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /* HEADER */
 
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 .header_wrap {
     display: flex;
     justify-content: space-between; 
@@ -123,7 +130,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 53px 40px 57px;
+    padding: 148px 40px 57px;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
 }
@@ -270,12 +277,12 @@ h2 {
     color: #767e9e;
 }
 
-.portfolio-block-button{
+.portfolio_tags{
     display: flex;
     padding: 0 4rem 1.8rem 4rem;
 }
 
-.portfolio-button {
+.portfolio_tag {
     margin-right: 1rem;
     padding: 0 0.6rem;
     font-family: 'Lato', sans-serif;
@@ -291,17 +298,17 @@ h2 {
     outline: none;
 }
 
-.portfolio-button:hover {
+.portfolio_tag:hover {
     border-color: #c5c5c5;
     color: #c5c5c5;
 }
 
-.portfolio-button-first {
+.portfolio_tag.active {
     color: #c5c5c5;
     border: 0.1rem solid #c5c5c5;
 }
 
-.portfolio-work {
+.portfolio_work {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -310,7 +317,11 @@ h2 {
     padding: 0 4rem;
 }
 
-.portfolio-work-img {
+.portfolio_hidden {
+    display: none;
+}
+
+.portfolio_work_img {
     margin-bottom: 2rem;
 
     max-width: 22rem;
