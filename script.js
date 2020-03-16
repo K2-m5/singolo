@@ -14,6 +14,7 @@ function addMenuClickHandler() {
 }
 
 function menuClickHandle(event) {
+    const menu = document.getElementById('nav_list');
     menu.querySelectorAll('li').forEach(el => el.classList.remove('first'));
     const element = event.target;
     element.classList.add('first');
