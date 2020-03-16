@@ -137,17 +137,35 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .iphone_ver {
     display: block;
-    padding-left: 36px;
+    margin-left: 3.6rem;
+    cursor: pointer;
+    width: 240px;
+    height: 483px;
+    background-image: url(assets/iPhone_Ver.png);
+    background-size: auto;
+}
+
+.iphone_ver.off {
+    background-image: url(assets/iPhone_Ver_off.png);
 }
 
 .iphone_hor {
     display: block;
-    padding-right: 34px;
+    margin-right: 3.4rem;
+    cursor: pointer;
+    width: 484px;
+    height: 240px;
+    background-image: url(assets/iPhone_Hor.png);
+    background-size: auto;
+}
+
+.iphone_hor.off {
+    background-image: url(assets/iPhone_Hor_off.png);
 }
 
 .arrow {
     position: absolute;
-    top: calc(50% - 16px);
+    top: calc(50% + 32px);
     cursor: pointer;
 }
 

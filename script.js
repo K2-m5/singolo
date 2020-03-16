@@ -4,6 +4,9 @@ window.onload = function() {
 
     addMenuClickHandler();
 
+    //iphone
+    addIphoneClickHandler();
+
     //Tags
     addTagsClickHandler();
 }
@@ -76,4 +79,18 @@ const showFilterPortfolioWorkBySelectedTag = (clickedTagText) => {
             portfolio_work_img.classList.remove('portfolio_hidden');
         }
     });
+}
+
+function addIphoneClickHandler () {
+    const iphone = document.querySelector('.slider_wrap');
+    iphone.addEventListener('click', iphoneClickHandle);
+}
+
+function iphoneClickHandle(event) {
+    const iphone = document.querySelectorAll('.slider_wrap');
+    const clickedSliderTarget = event.target;
+        if (clickedSliderTarget.classList.contains('iphone') ) {
+            clickedSliderTarget.classList.toggle('off');
+        }
+    console.log(clickedSliderTarget.classList);
 }
