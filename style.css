@@ -136,8 +136,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     border-bottom: solid 6px #ea676b;
 }
 
+.slider_item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.slider_wrap_2 {
+.slider_item_2 {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -156,12 +162,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .iphone_ver {
     display: block;
-    margin-left: 3.6rem;
+    margin-right: 7rem;
     cursor: pointer;
     width: 240px;
     height: 483px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url(assets/iPhone_Ver.png);
-    background-size: auto;
 }
 
 .iphone_ver.off {
@@ -170,12 +178,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .iphone_hor {
     display: block;
-    margin-right: 3.4rem;
+    margin-left: 0.4rem;
     cursor: pointer;
-    width: 484px;
     height: 240px;
+    width: 484px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url(assets/iPhone_Hor.png);
-    background-size: auto;
 }
 
 .iphone_hor.off {
