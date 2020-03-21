@@ -4,8 +4,10 @@ window.onload = function() {
 
     addMenuClickHandler();
 
-    //iphone
+    //slider
     addIphoneClickHandler();
+
+    addArrowClickHandler();
 
     //Tags
     addTagsClickHandler();
@@ -82,15 +84,29 @@ const showFilterPortfolioWorkBySelectedTag = (clickedTagText) => {
 }
 
 function addIphoneClickHandler () {
-    const iphone = document.querySelector('.slider_wrap');
+    const iphone = document.querySelector('.slider_item');
     iphone.addEventListener('click', iphoneClickHandle);
 }
 
 function iphoneClickHandle(event) {
-    const iphone = document.querySelectorAll('.slider_wrap');
     const clickedSliderTarget = event.target;
         if (clickedSliderTarget.classList.contains('iphone') ) {
             clickedSliderTarget.classList.toggle('off');
         }
     console.log(clickedSliderTarget.classList);
+}
+
+function  addArrowClickHandler() {
+    const arrowList = document.querySelectorAll('.arrow');
+    arrowList.forEach((arrow) => {
+        arrow.addEventListener('click', arrowClickHandler); 
+    } )
+}
+
+function arrowClickHandler(event) {
+    const clickedArrowTarget = event.target;
+    document.querySelector('.slider_item_2').classList.toggle('none');
+    document.querySelector('.slider_item').classList.toggle('none');
+    document.querySelector('.slider_wrap').classList.toggle('blue');
+    console.log(clickedArrowTarget.classList);
 }
