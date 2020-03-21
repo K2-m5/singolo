@@ -86,14 +86,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     letter-spacing: -0.1px;
 }
 
-#nav_list li {
+#nav_list li a{
     margin-right: 29px;
     cursor: pointer;
     transition: color .2s linear;
     position: relative;
+    color: inherit;
+    text-decoration: inherit;
 }
 
-#nav_list li::after {
+#nav_list li a::after {
     content: "";
     background-color: #434759;
     width: 3px;
@@ -107,7 +109,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     transform: translateY(-50%);
 }
 
-#nav_list li:hover {
+#nav_list li a:hover {
     color: #f06c64;
     text-decoration: underline;
 }
@@ -120,7 +122,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     width: 0;
 }
 
-#nav_list li.first {
+#nav_list li a.first {
     color: #f06c64;
 }
 
@@ -148,13 +150,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 7.1rem;
+    padding: 0 7.2rem;
     width: 100%;
     animation: 5.5s ease-in-out;
 }
 
 .slider_item_2 {
-    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -212,7 +213,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .left {
-    left: 33px;
+    left: 40px;
     animation-name: left;
     animation-direction: reverse;
 }
