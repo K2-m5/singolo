@@ -32,7 +32,6 @@
                         <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.3022 4.0077C16.2333 3.09077 16.2325 1.64471 15.3003 0.728736C14.3113 -0.242912 12.6634 -0.242912 11.6745 0.728737L0.955147 11.2608C-0.318384 12.5121 -0.318381 14.4879 0.955149 15.7392L11.6745 26.2713C12.6634 27.2429 14.3113 27.2429 15.3003 26.2713C16.2325 25.3553 16.2333 23.9092 15.3022 22.9923L7.93355 15.7366C6.66347 14.486 6.66347 12.514 7.93355 11.2634L15.3022 4.0077Z" fill="#E94348"/>
                             </svg>
-                            
                     </div>
                     <div class="slider_item">
                         <div class="iphone_ver iphone"></div>
@@ -486,6 +485,24 @@
             </div>
         </section>
 
+        <div id="error-message-block" class="hide-window">
+            <div id="error-message">
+              <h2>Для отправки сообщения требуется правильно заполнить поля ввода!</h2>
+              <button id ="error-close-button" type="button">Повторить!</button>
+            </div>
+          </div>
+      
+          <div id="message-block" class="hide-window">
+            <div id="message">
+              <h2 id="message-first">Сообщение отправлено!</h2>
+              <p id="message-name"></p>
+              <p id="message-email"></p>
+              <p id="message-subject"></p>
+              <p id="message-description"></p>
+              <button id ="close-button" type="button">Хорошо</button>
+            </div>
+          </div>
+
         <section class="question">
             <div class="">
                 <div class="question-wrapper">
@@ -493,12 +510,12 @@
                     <p class="question-subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                     </p>
                     <div class="question-contact">
-                        <form class="contact-block-form" action="https://google.com/search" method="get">
-                            <input type="text" required placeholder="Name(Required)">
-                            <input type="email" required placeholder="Email(Required)">
-                            <input type="text" placeholder="Subject">
-                            <textarea placeholder="Describe your project in detail..." ></textarea>
-                            <button class="block-form-button">Submit</button>
+                        <form class="contact-block-form" id="form" action="https://google.com/search" method="get" target="_blank">
+                            <input type="text" id="name-input" required placeholder="Name(Required)" maxlength="50">
+                            <input type="email" id="email-input" required placeholder="Email(Required)" maxlength="50">
+                            <input type="text" id="subject-input" placeholder="Subject" maxlength="80">
+                            <textarea id="description-input" placeholder="Describe your project in detail..." maxlength="1100"></textarea>
+                            <button id="submit-button" class="block-form-button" type="button">Submit</button>
                         </form>
                         <div class="contact-information">
                             <h2 class="contact-information-title">Contact information</h2>

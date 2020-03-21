@@ -11,6 +11,8 @@ window.onload = function() {
 
     //Tags
     addTagsClickHandler();
+
+    getMessage();
 }
 
 function addMenuClickHandler() {
@@ -110,3 +112,53 @@ function arrowClickHandler(event) {
     document.querySelector('.slider_wrap').classList.toggle('blue');
     console.log(clickedArrowTarget.classList);
 }
+
+function getMessage() {
+    let errorMessageBlock = document.getElementById('error-message-block');
+    let messageBlock = document.getElementById('message-block');
+    let messageName = document.getElementById('message-name');
+    let messageEmeil = document.getElementById('message-email');
+    let messageSubject = document.getElementById('message-subject');
+    let messageDescription = document.getElementById('message-description');
+  
+    document.getElementById('submit-button').addEventListener('click', () => {
+      let nameValue = document.getElementById('name-input').value;
+      let emailValue = document.getElementById('email-input').value.toString();
+      let subjectValue = document.getElementById('subject-input').value;
+      let descriptionValue = document.getElementById('description-input').value.toString();
+  
+      if (nameValue == '' || emailValue == '' || !(/.+@.+\..+/i.test(document.getElementById('email-input').value))) {
+        errorMessageBlock.classList.remove('hide-window');
+        document.getElementById('error-close-button').addEventListener('click', () => {
+          errorMessageBlock.classList.add('hide-window');
+        });
+        return false;
+      };
+  
+      messageBlock.classList.remove('hide-window');
+  
+      messageName.append(`Ваше имя: ${nameValue}`);
+      messageEmeil.append(`Ваша электронная почта: ${emailValue}`);
+  
+      if (subjectValue == '') {
+        messageSubject.append('Без темы');
+      } else {
+        messageSubject.append(`Тема: ${subjectValue}`);
+      };
+  
+      if (descriptionValue == '') {
+        messageDescription.append('Без описания');
+      } else {
+        messageDescription.append(`Описание: ${descriptionValue}`);
+      };
+    });
+  
+    document.getElementById('close-button').addEventListener('click', () => {
+      document.getElementById('form').reset();
+      messageBlock.classList.add('hide-window');
+      messageName.innerHTML = '';
+      messageEmeil.innerHTML = '';
+      messageSubject.innerHTML = '';
+      messageDescription.innerHTML = '';
+    });
+  };
