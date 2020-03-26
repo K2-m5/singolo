@@ -127,7 +127,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 /*Slider*/
-
+/*
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-150%);
+}
+*/
 .slider_wrap {
     position: relative;
     display: flex;
@@ -138,6 +147,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
     transition: all 1s;
+    transform: translate();
 }
 
 .blue {
@@ -146,27 +156,63 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     transition: all 1s;
 }
 
-.slider_item {
+.one {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 7.2rem;
     width: 100%;
-    animation: 5.5s ease-in-out;
+    animation: 0.5s ease-in-out;
 }
 
-.slider_item_2 {
+.two {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 483px;
     background-size: auto;
-    animation: 5.5s ease-in-out;
+    animation: 0.5s ease-in-out;
 }
 
 .none {
     display: none;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left{
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right{
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 .iphone_ver {
@@ -812,4 +858,12 @@ textarea::placeholder {
     line-height: 2.1rem;
     letter-spacing: 0.4px;
     color: #666d89;
-} 
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+}
