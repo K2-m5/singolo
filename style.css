@@ -175,6 +175,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     animation: 0.5s ease-in-out;
 }
 
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+.next {
+display: block;
+}
+
 .none {
     display: none;
 }
@@ -245,24 +255,35 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     background-image: url(assets/iPhone_Hor_off.png);
 }
 
-.arrow {
-    display: block;
+.control {
     position: absolute;
     top: calc(50% + 32px);
     cursor: pointer;
 }
 
-.right {
-    right: 40px;
-    animation-name: right;
-    animation-direction: reverse;
+.control.right {
+    right: 50px;
+    left: auto;
 }
 
-.left {
-    left: 40px;
-    animation-name: left;
-    animation-direction: reverse;
+.control.left {
+    left: 50px;
+    right: auto;
 }
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+}
+
+.arrow.right {
+    right: 50%;
+}
+
+.arrow.left {
+    left: 50%;
+  }
 
 /*services*/
 
