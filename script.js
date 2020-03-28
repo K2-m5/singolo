@@ -1,13 +1,12 @@
 
 window.onload = function() {
-    console.log('Hello')
 
     addMenuClickHandler();
 
     //slider
     addIphoneClickHandler();
 
-    addArrowClickHandler();
+/*     addArrowClickHandler(); */
 
     //Tags
     addTagsClickHandler();
@@ -18,26 +17,27 @@ window.onload = function() {
 function addMenuClickHandler() {
     const menu = document.getElementById('nav_list');
     menu.addEventListener('click', menuClickHandle);
-}
 
-function menuClickHandle(event) {
-    const menu = document.getElementById('nav_list');
-    menu.querySelectorAll('a').forEach(el => el.classList.remove('first'));
-    const element = event.target;
-    element.classList.add('first');
-    console.log (element);
-    const dataSelector = element.getAttribute("data-selector");
-    const elToScroll = document.querySelector(dataSelector);
-    scrollToElement(elToScroll);
-}
 
-function scrollToElement(pageElement) {
-    let positionY = 0;
-    while (pageElement !== null) {
-        positionY += pageElement.offsetTop;
-        pageElement = pageElement.offsetParent;
-        window.scrollTo(0, positionY - 50);
-    }
+    function menuClickHandle(event) {
+        const menu = document.getElementById('nav_list');
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('first'));
+        const element = event.target;
+        element.classList.add('first');
+        console.log (element);
+        const dataSelector = element.getAttribute("data-selector");
+        const elToScroll = document.querySelector(dataSelector);
+        scrollToElement(elToScroll);
+    };
+
+    function scrollToElement(pageElement) {
+        let positionY = 0;
+        while (pageElement !== null) {
+            positionY += pageElement.offsetTop;
+            pageElement = pageElement.offsetParent;
+            window.scrollTo(0, positionY - 50);
+        }
+    };
 }
 
 const addTagsClickHandler = () => {
@@ -86,32 +86,149 @@ const showFilterPortfolioWorkBySelectedTag = (clickedTagText) => {
 }
 
 function addIphoneClickHandler () {
-    const iphone = document.querySelector('.slider_item');
+    const iphone = document.querySelector(".slide__number-one");
     iphone.addEventListener('click', iphoneClickHandle);
+
+
+    function iphoneClickHandle(event) {
+        const clickedSliderTarget = event.target;
+            if (clickedSliderTarget.classList.contains('iphone') ) {
+                clickedSliderTarget.classList.toggle('off');
+            }
+        console.log(clickedSliderTarget.classList);
+    }
+/* 
+    function  addArrowClickHandler() {
+        const arrowList = document.querySelectorAll('.arrow');
+        arrowList.forEach((arrow) => {
+            arrow.addEventListener('click', arrowClickHandler); 
+        } )
+    } */
 }
 
-function iphoneClickHandle(event) {
-    const clickedSliderTarget = event.target;
-        if (clickedSliderTarget.classList.contains('iphone') ) {
-            clickedSliderTarget.classList.toggle('off');
-        }
-    console.log(clickedSliderTarget.classList);
-}
+/* 
+const sliderItemClassName = 'slide';
+const activeSliderItemName = 'slide_active';
+const hiddenLeftClassName = 'hidden-left'; */
 
-function  addArrowClickHandler() {
-    const arrowList = document.querySelectorAll('.arrow');
-    arrowList.forEach((arrow) => {
-        arrow.addEventListener('click', arrowClickHandler); 
-    } )
-}
-
+/*
 function arrowClickHandler(event) {
-    const clickedArrowTarget = event.target;
-    document.querySelector('.slider_item_2').classList.toggle('none');
-    document.querySelector('.slider_item').classList.toggle('none');
-    document.querySelector('.slider_wrap').classList.toggle('blue');
-    console.log(clickedArrowTarget.classList);
-}
+    const clickedArrowTarget = event.currentTarget;
+    const currentSlide = document.querySelector(".".concat(activeSliderItemName));
+
+    if (clickedArrowTarget.classList.contains('left')) {
+        currentSlide.classList.remove(activeSliderItemName)
+        currentSlide.classList.add(hiddenLeftClassName);
+
+        let nextSlide = currentSlide.nextElementSibling;
+
+        if (!!nextSlide) {
+            nextSlide.classList.add(activeSliderItemName);
+        }
+    } else {
+        console.log('right clicked');
+    }
+    
+*/
+    // document.querySelector('.slider_item_2').classList.toggle('none');
+    // document.querySelector(sliderItemClassName).classList.toggle('none');
+    // document.querySelector('.slider-container').classList.toggle('blue');
+
+
+// function getNextSlide(currentSlide) {
+//     let nextSibling = currentSlide.nextSibling;
+
+//     while (nextSibling.)
+// }
+
+
+    let items = document.querySelectorAll('.slider_wrap .slide');
+    console.log(items);
+    let currentItem = 0;
+    let isEnabled = true;
+
+    function changeCurrentItem(n) { /*give the value(currentItem) of a variable*/ 
+        currentItem = (n + items.length) % items.length;
+    };
+
+    function hideItem(direction) {
+        isEnabled = false;
+/*         let itemsNow =  items[currentItem]; */
+        items[currentItem].classList.add(direction);
+        items[currentItem].addEventListener('animationend', function() {
+            console.log(this);
+            console.log(this.classList);
+            this.classList.remove("slide_active", direction);
+        });
+    }; 
+
+    function showItem(direction) {
+/*         let itemsNow =  items[currentItem]; */
+
+        items[currentItem].classList.add('next', direction);
+        items[currentItem].addEventListener('animationend', function() {
+            console.log(this);
+            console.log(this.classList);
+            this.classList.remove('next', direction);
+            this.classList.add('slide_active');
+            isEnabled = true;
+        });
+    };
+
+/* 
+    function hideItem(direction) {
+        isEnabled = false;        
+        const itemsNow =  items[currentItem];
+        items[currentItem].classList.add(direction);
+        items[currentItem].addEventListener('animationend', function() {
+            console.log('items', items);
+            console.log('currentItem', currentItem);
+            items[currentItem].classList.remove("slide_active", direction);
+        });
+    }
+
+
+    function showItem(direction) {
+        let itemsNow =  items[currentItem];
+        items[currentItem].classList.add('next', direction);
+        items[currentItem].addEventListener('animationend', function() {
+            items[currentItem].classList.remove('next', direction);
+            items[currentItem].classList.add('slide_active');
+            isEnabled = true;
+            changeCurrentItem(n + 1);
+    });
+} 
+ */
+
+
+    function nextItem(n) {
+        hideItem('to-left');
+        changeCurrentItem(n + 1);
+        showItem('from-right');
+    };
+
+    function previousItem(n) {
+        hideItem('to-right');
+        changeCurrentItem(n - 1);
+        showItem('from-left');
+    };
+
+    const left =  document.querySelector('.arrow.left')
+
+    left.addEventListener('click', function() {
+        if (isEnabled) {
+            previousItem(currentItem);
+        }
+    });
+
+    const right =  document.querySelector('.arrow.right')
+
+    right.addEventListener('click', function() {
+        if (isEnabled) {
+            nextItem(currentItem);
+        }
+    });
+
 
 function getMessage() {
     let errorMessageBlock = document.getElementById('error-message-block');
