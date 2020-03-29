@@ -1,0 +1,100 @@
+
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 9.5rem; */
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+    height: 60rem;
+}
+
+.slider_wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    /* padding: 5rem 0 6rem; */
+    transition: all 1s;
+}
+
+.blue {
+    background-color: #648BF0;
+    border-bottom: solid 6px #648BF0;
+    transition: all 1s;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide_active, .next {
+    display: block;
+}
+
+.arrow {
+    cursor: pointer;
+    /* padding: 0 4rem 0 4rem; */
+}
+
+.slide__number-one {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.slide__number-two {
+    justify-content: space-around;
+    height: 100%;
+    background-size: auto;
+}
+
+.next {
+    position: absolute;
+  }
+  
+
+.to-left {
+    animation-name: left;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+
