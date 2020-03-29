@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .wrapper {
     max-width: 1020px;
     margin: auto;
-    width: 100%;
 }
 
 /* HEADER */
@@ -46,14 +45,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .header {
     position: fixed;
     top: 0;
+    max-width: 1020px;
     width: 100%;
     z-index: 100;
-    max-width: 1020px;
 }
 
 .header_wrap {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: baseline;
     padding: 32px 39px 32px;
     background-color: #2d303a;
@@ -307,11 +306,6 @@ h2 {
 
 /*portfolio*/
 
-.wrapper {
-    max-width: 1020px;
-    margin: auto;
-}
-
 .portfolio-wrapper{
     background-color: #2d303a;
     padding: 6.3rem 0rem 4.8rem;
@@ -412,7 +406,7 @@ h2 {
 
 .person {
     display: block;
-    width: 33.3%;
+    /* width: 33.3%; */
     margin-right: 2rem;
     min-width: 15rem;
 }
@@ -810,10 +804,38 @@ textarea::placeholder {
     color: #666d89;
 }
 
-@media (min-width: 768px) and (max-width: 1020px) {
+@media (max-width: 1019px) {
 
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 768px) {
+
+.services_wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 33px 30px 37px;
+    background-color: #f2f2f2;
+}
 
 }
+
+@media (max-width: 375px) {
+
+    .services_wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 33px 30px 37px;
+        background-color: #f2f2f2;
+    }
+
+    .about-us-persons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .person {
+        margin-bottom: 2rem;
+        min-width: 15rem;
+    }
+    
+    }

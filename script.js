@@ -12,6 +12,8 @@ window.onload = function() {
     getMessage();
 }
 
+/* Vnu_navigation */
+
 function addMenuClickHandler() {
     const menu = document.getElementById('nav_list');
     menu.addEventListener('click', menuClickHandle);
@@ -37,6 +39,8 @@ function addMenuClickHandler() {
         }
     };
 }
+
+/* Portfolio */
 
 const addTagsClickHandler = () => {
     document.querySelector('.portfolio_tags').addEventListener('click', (e) => {
@@ -84,6 +88,8 @@ const addTagsClickHandler = () => {
     }
 };
 
+/* Iphone_on/of */
+
 function addIphoneClickHandler () {
     const iphone = document.querySelector(".slide__number-one");
     iphone.addEventListener('click', iphoneClickHandle);
@@ -95,66 +101,68 @@ function addIphoneClickHandler () {
                 clickedSliderTarget.classList.toggle('off');
             }
         console.log(clickedSliderTarget.classList);
+    };
+}
+
+/* Slider */
+
+let items = document.querySelectorAll('.slider_wrap .slide');
+console.log(items);
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) { /*give the value(currentItem) of a variable*/ 
+    currentItem = (n + items.length) % items.length;
+};
+
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        console.log(this);
+        console.log(this.classList);
+        this.classList.remove("slide_active", direction);
+    });
+}; 
+
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        console.log(this);
+        console.log(this.classList);
+        this.classList.remove('next', direction);
+        this.classList.add('slide_active');
+        isEnabled = true;
+    });
+};
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+};
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+};
+
+const left =  document.querySelector('.arrow.left')
+
+left.addEventListener('click', function() {
+    if (isEnabled) {
+        previousItem(currentItem);
     }
+});
 
+const right =  document.querySelector('.arrow.right')
 
-    let items = document.querySelectorAll('.slider_wrap .slide');
-    console.log(items);
-    let currentItem = 0;
-    let isEnabled = true;
-
-    function changeCurrentItem(n) { /*give the value(currentItem) of a variable*/ 
-        currentItem = (n + items.length) % items.length;
-    };
-
-    function hideItem(direction) {
-        isEnabled = false;
-        items[currentItem].classList.add(direction);
-        items[currentItem].addEventListener('animationend', function() {
-            console.log(this);
-            console.log(this.classList);
-            this.classList.remove("slide_active", direction);
-        });
-    }; 
-
-    function showItem(direction) {
-        items[currentItem].classList.add('next', direction);
-        items[currentItem].addEventListener('animationend', function() {
-            console.log(this);
-            console.log(this.classList);
-            this.classList.remove('next', direction);
-            this.classList.add('slide_active');
-            isEnabled = true;
-        });
-    };
-
-    function nextItem(n) {
-        hideItem('to-left');
-        changeCurrentItem(n + 1);
-        showItem('from-right');
-    };
-
-    function previousItem(n) {
-        hideItem('to-right');
-        changeCurrentItem(n - 1);
-        showItem('from-left');
-    };
-
-    const left =  document.querySelector('.arrow.left')
-
-    left.addEventListener('click', function() {
-        if (isEnabled) {
-            previousItem(currentItem);
-        }
-    });
-
-    const right =  document.querySelector('.arrow.right')
-
-    right.addEventListener('click', function() {
-        if (isEnabled) {
-            nextItem(currentItem);
-        }
-    });
+right.addEventListener('click', function() {
+    if (isEnabled) {
+        nextItem(currentItem);
+    }
+});
 
 function getMessage() {
     let errorMessageBlock = document.getElementById('error-message-block');
