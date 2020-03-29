@@ -4,9 +4,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 95px;
+    /* margin-top: 9.5rem; */
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+    height: 60rem;
 }
 
 .slider_wrap {
@@ -15,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    padding: 5rem 0 6rem;
+    /* padding: 5rem 0 6rem; */
     transition: all 1s;
 }
 
@@ -38,7 +39,7 @@
 
 .arrow {
     cursor: pointer;
-    padding: 0 4rem 0 4rem;
+    /* padding: 0 4rem 0 4rem; */
 }
 
 .slide__number-one {
