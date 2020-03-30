@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 	margin: 0;
 	padding: 0;
 	border: 0;
-    line-height: 1;
+	line-height: 0;
 }
 
 .wrapper {
@@ -131,9 +131,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .slider-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 9.5rem;
+    padding: 5.1rem 11.3rem 6rem;
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
     height: 60rem;
@@ -142,11 +143,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .slider_wrap {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    padding: 5rem 0 6rem;
     transition: all 1s;
+    width: 100%;
 }
 
 .blue {
@@ -166,9 +167,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: block;
 }
 
-.arrow {
+.slider .arrow {
+    position: absolute;
     cursor: pointer;
-    padding: 0 4rem 0 4rem;
+    z-index: 2;
+
+}
+
+.right{
+    right: 10.4%;
+}
+
+.left{
+    left: 10.7%;
 }
 
 .slide__number-one {
@@ -180,9 +191,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .slide__number-two {
-    justify-content: space-around;
-    height: 100%;
-    background-size: auto;
+    /* justify-content: space-between; */
+    position: relative;
+    align-items: center;
+    width: 100%;
+    /* height: 484px; */
 }
 
 .next {
@@ -450,7 +463,7 @@ h2 {
 
 .person {
     display: block;
-    /* width: 33.3%; */
+    width: 33.3%;
     margin-right: 2rem;
     min-width: 15rem;
 }
@@ -765,7 +778,7 @@ textarea::placeholder {
 }
 
 .information-list-item.phone-item {
-    margin-bottom: 10px;
+    margin-bottom: 1.8rem;
 }
 
 .information-list-item-img {
@@ -850,6 +863,11 @@ textarea::placeholder {
 
 @media (max-width: 1019px) {
 
+    .services_wrap{
+        grid-template-columns: 1fr 1fr;
+        padding: 33px 30px 37px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -908,6 +926,7 @@ textarea::placeholder {
 }
 
 .portfolio_work {
+    height: 100%;
     max-height: 122vw;
     overflow: hidden;
     padding: 0% 5.2% 0.3%;
@@ -982,7 +1001,7 @@ margin: 6.9% 0% 0% 0%;
 
     .person {
         margin-bottom: 2rem;
-        min-width: 15rem;
+        min-width: 15vw;
     }
     
     }
