@@ -139,20 +139,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     position: relative;
     align-items: center;
     margin-top: 9.5rem;
-    padding: 5.1rem 11.3rem 6rem;
-    background-color: #f06c64;
-    border-bottom: solid 6px #ea676b;
-    height: 60rem;
 }
 
 .slider_wrap {
     position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    transition: all 1s;
     width: 100%;
+    height: 60rem;
 }
 
 .blue {
@@ -180,10 +173,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .right{
+    top: 47%;
     right: 4%;
 }
 
 .left{
+    top: 47%;
     left: 4%;
 }
 
@@ -192,15 +187,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     position: relative;
     align-items: center;
     justify-content: space-between;
-
+    padding: 5.1rem 11.3rem 6rem;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
 }
 
 .slide__number-two {
-    /* justify-content: space-between; */
+    display: flex;
     position: relative;
     align-items: center;
-    width: 100%;
-    /* height: 484px; */
+    justify-content: space-around;
+    padding: 5.1rem 11.3rem 6rem;
+    background-color: #648BF0;
+    border-bottom: solid 6px #648BF0;
 }
 
 .next {
