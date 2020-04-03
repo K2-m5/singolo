@@ -128,10 +128,15 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /*Slider*/
 
+.slider {
+    max-width: 1020px;
+    margin: auto;
+    overflow: hidden;
+}
+
 .slider-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    position: relative;
     align-items: center;
     margin-top: 9.5rem;
     padding: 5.1rem 11.3rem 6rem;
@@ -167,7 +172,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     display: block;
 }
 
-.slider .arrow {
+.arrow {
     position: absolute;
     cursor: pointer;
     z-index: 2;
@@ -175,11 +180,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .right{
-    right: 10.4%;
+    right: 4%;
 }
 
 .left{
-    left: 10.7%;
+    left: 4%;
 }
 
 .slide__number-one {
