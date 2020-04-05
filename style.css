@@ -278,13 +278,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .services-wrapper{
     padding: 0 0;
-    border-bottom: 6px #ffffff;
+    border-bottom: solid 6px #ffffff;
 }
 
 .services_wrap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 33px 30px 37px;
+    padding: 33px 30px 31px;
     background-color: #f2f2f2;
 }
 
@@ -369,7 +369,7 @@ h2 {
 
 .portfolio-wrapper{
     background-color: #2d303a;
-    padding: 6.3rem 0rem 4.8rem;
+    padding: 6.3rem 0rem 4.6rem;
     border-bottom: 0.6rem solid #323746;
 }
 
@@ -433,7 +433,6 @@ h2 {
 
 .portfolio_work_img {
     margin-bottom: 2rem;
-
     max-width: 22rem;
     max-height: 18.7rem;
     overflow: hidden;
@@ -520,7 +519,7 @@ h2 {
 /* question*/
 
 .question-wrapper {
-    padding: 6.2rem 4rem 1.3rem;
+    padding: 6.2rem 4rem 0.8rem;
     background-color: #f06c64;
     border-bottom: 0.6rem solid #ea676b;
 }
@@ -603,7 +602,7 @@ textarea::placeholder {
 }
 
 .block-form-button {
-    max-width: 13.4rem;
+    /* max-width: 13.4rem; */
     display: block;
     cursor: pointer;
     padding: 1.1rem 0%;
@@ -613,7 +612,7 @@ textarea::placeholder {
     background-color: #FBC65F;
     color: #886A30;
     font-family: "Lato";
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
     outline: none;
 }
@@ -879,11 +878,16 @@ textarea::placeholder {
     /*slider*/
 
     .slider-container {
-        height: 59vw;
+        /* height: 59vw; */
+    }
+
+    .slider_wrap {
+      height: 45.17rem;
     }
 
     .slide__number-one {
-        padding: 15% 11% 5.2%;
+        padding: 5.4% 11% 6%;
+        border-bottom: solid 4.5px #ea676b;
     }
 
     .slide__number-two {
@@ -909,15 +913,16 @@ textarea::placeholder {
 
     .services-wrapper{
         height: 87.6vw;
+        border-bottom: none;
     }
 
     .services_wrap{
         grid-template-columns: 1fr 1fr;
-        padding: 3.1% 4% 0% 4%;
+        padding: 3.1% 4% 3% 4%;
     }
 
     .services_title {
-        padding: 5.3% 0% 0% 5.3%;
+        padding: 5.5% 0% 0% 5.3%;
     }
 
     .services_item {
@@ -932,28 +937,29 @@ textarea::placeholder {
     }
 
     .portfolio_tags {
-        display: flex;
-        padding: 0% 3% 3.5% 5.3%;
+        /* display: flex; */
+        padding: 0% 3% 3.7% 5.3%;
     }
 
     .portfolio_work {
         height: 100%;
         max-height: 122vw;
         overflow: hidden;
-        padding: 0% 5.2% 0.3%;
+        padding: 0% 5.2% 0%;
     }
 
 
     .portfolio_work_img {
-        margin-bottom: 2.6%;
+        margin-bottom: 1.9rem;
         max-width: 28vw;
         max-height: 24.1vw;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
 
     .about-us-wrapper {
-        padding: 7.3% 5.1% 4.4% 5.3%;
+        padding: 7.3% 5.1% 5.3% 5.3%;
+        border-bottom: none;
     }
 
     .about-us-tittle {
@@ -1006,29 +1012,291 @@ textarea::placeholder {
     }
 
     textarea{
-        height: 20.4vw;
-        padding: 2% 2%;
+      height: 20.4vw;
+      padding: 2% 2%;
     }
 
 }
 
 @media (max-width: 375px) {
 
-    .services_wrap{
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 33px 30px 37px;
-        background-color: #f2f2f2;
-    }
+  .header_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.1rem;
+    border-bottom: none;
+  }
 
-    .about-us-persons{
-        display: flex;
-        flex-direction: column;
-    }
+  .header_title {
+    font-size: 1.8rem;
+    font-family: "Lato";
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    text-align: center;
+    padding-left: 1rem;
+}
 
-    .person {
-        margin-bottom: 2rem;
-        min-width: 15vw;
-    }
-    
-    }
+  #nav_list {
+      display: none;
+  }
+
+  .slider-container {
+    /* height: 21.8rem; */
+    margin-top: 7.1rem;
+  }
+
+  .slider_wrap {
+    height: 22rem;
+  }
+
+  .slide__number-one {
+    padding: 5% 11% 5.8%;
+    border-bottom: solid 2.2px #ea676b;
+  }
+  
+  .iphone_ver {
+    height: 177.5px;
+    width: 88px;
+  }
+
+  .iphone_hor {
+    margin-left: 0rem;
+    height: 88px;
+    width: 177.5px;
+  }
+
+  .slide__number-two {
+    padding: 6% 11% 5.2%;
+    border-bottom: solid 2.5px #648BF0;
+  }
+
+  .slide__number-two img {
+    height: 177.5px;
+  }
+
+  .left {
+    top: 44%;
+    left: 2.5%;
+  }
+
+  .right {
+    top: 44%;
+    right: 2.5%;
+  }
+
+  .services-wrapper {
+    height: 100%;
+  }
+
+  .services_title {
+  padding: 7.6% 0% 0% 8.6%;
+  }
+
+  .services_text {
+    word-spacing: -2px;
+    padding: 21px 43px 0px 32px;
+    letter-spacing: 0.2px;
+  }
+  
+  .services_wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 28px 21px 1px;
+    background-color: #f2f2f2;
+  }
+
+  .services_item {
+    width: 32rem;
+    height: 11.9rem;
+  }
+
+  .portfolio-wrapper {
+    padding: 4.5rem 0rem 4rem;
+    height: 100%;
+    border-bottom: none;
+  }
+
+  .portfolio-tittle {
+    padding: 0 3rem;
+  }
+
+  .portfolio-subtitle {
+    padding: 2rem 3rem 1rem;
+    letter-spacing: -0.1px;
+    line-height: 3rem;
+  }
+
+  .portfolio_tags {
+    padding: 0.6rem 3rem 1rem;
+  }
+
+  .portfolio_work {
+    height: 84.4em;
+    max-height: 152vw;
+    overflow: hidden;
+    padding: 1.5rem 3rem 1rem;
+  }
+
+  .portfolio_work_img {
+      margin-bottom: 1.5rem;
+      max-width: 15.1rem;
+      width: 100%;
+      max-height: 12.7rem;
+      height: 100%;
+      /* overflow: hidden; */
+  }
+
+  .portfolio_work_img img {
+    width: 151px;
+    height: 127px;
+  }
+
+  .about-us-persons{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .person {
+      width: 31.4rem;
+      margin-bottom: 3.4rem;
+      margin-right: 0;
+      height: 44rem;
+  }
+
+  .person-foto {
+    width: 31.4rem;
+    height: 31.4rem;
+  }
+
+  .about-us-wrapper {
+    padding: 3.6rem 3rem 1.1rem;
+    border-bottom: none;
+  }
+
+  .about-us-tittle {
+      margin: 0% 0%;
+  }
+
+  .about-us-subtitle {
+      margin: 2rem 0 2.4rem;
+      padding: 0% 0% 0% 0%;
+      letter-spacing: -0.1px;
+      text-align: left;
+  }
+
+  .person-social-media {
+  margin: 1.3rem 0% 0rem;
+  }
+
+  .person-name {
+      margin: 5.7% 0 0.9%;
+  }
+
+  .question-wrapper {
+      padding: 4.7rem 3rem 2.5rem;
+      border-bottom: none;
+  }
+
+  .question-contact{
+      padding: 0% 0% 0% 0%;
+      flex-direction: column;
+  } 
+
+  .question-subtitle {
+      margin: 2rem 0 2.3rem;
+      letter-spacing: 0.15px;
+      text-align: left;
+  }
+
+  .contact-block-form {
+      padding-right: 1.7rem;
+  }
+
+  input {
+      margin-bottom: 1.2rem;
+      padding: 1.2rem 0.7rem 1.1rem;
+      width: 31.5rem;
+  }
+
+  textarea{
+    height: 16rem;
+    padding: 0.8rem 0.6rem 1rem;
+    width: 31.5rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .block-form-button {
+    padding: 1.6rem 0%;
+    width: 31.5rem;
+  }
+
+  .contact-information-title {
+    padding: 0 1.3rem;
+    font-size: 1.8rem;
+    font-family: "Lato";
+    text-align: left;
+    color: #f0d8d9;
+  }
+
+  /*contact information*/
+
+  .contact-information {
+    width: 100%;
+  }
+
+  .contact-information-title {
+    padding: 3.2rem 0.1rem 0.3rem;
+  }
+
+  .contact-information-subtitle {
+    padding: 0rem 0rem 1.3rem 0rem;
+    text-align: justify;
+    line-height: 2.2rem;
+    letter-spacing: -0.2px;
+  }
+
+  .contact-information-list {
+    padding: 0.3rem 0rem;
+    list-style: none;
+  }
+
+  .contact-information-list li a {
+    color: #f0d8d9;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    text-decoration: none;
+  }
+
+  .information-list-item {
+    margin-bottom: 15.1px;
+  }
+
+  .information-list-item.phone-item {
+    margin-bottom: 1.9rem;
+  }
+
+  .information-list-item-img {
+    display: inline-block;
+    text-align: center;
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+
+  /*footer*/
+
+  .wrapper-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+
+}
