@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 	margin: 0;
 	padding: 0;
 	border: 0;
-    line-height: 1;
+	line-height: 0;
 }
 
 .wrapper {
@@ -128,25 +128,24 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /*Slider*/
 
+.slider {
+    max-width: 1020px;
+    margin: auto;
+    overflow: hidden;
+}
+
 .slider-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
     margin-top: 9.5rem;
-    background-color: #f06c64;
-    border-bottom: solid 6px #ea676b;
-    height: 60rem;
 }
 
 .slider_wrap {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    padding: 5rem 0 6rem;
-    transition: all 1s;
+    width: 100%;
+    height: 60rem;
 }
 
 .blue {
@@ -167,8 +166,20 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 .arrow {
+    position: absolute;
     cursor: pointer;
-    padding: 0 4rem 0 4rem;
+    z-index: 2;
+
+}
+
+.right{
+    top: 47%;
+    right: 4%;
+}
+
+.left{
+    top: 47%;
+    left: 4%;
 }
 
 .slide__number-one {
@@ -176,13 +187,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     position: relative;
     align-items: center;
     justify-content: space-between;
-
+    padding: 5.1rem 11.3rem 6rem;
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
 }
 
 .slide__number-two {
+    display: flex;
+    position: relative;
+    align-items: center;
     justify-content: space-around;
-    height: 100%;
-    background-size: auto;
+    padding: 5.1rem 11.3rem 6rem;
+    background-color: #648BF0;
+    border-bottom: solid 6px #648BF0;
 }
 
 .next {
@@ -450,7 +467,7 @@ h2 {
 
 .person {
     display: block;
-    /* width: 33.3%; */
+    width: 33.3%;
     margin-right: 2rem;
     min-width: 15rem;
 }
@@ -564,7 +581,7 @@ input::placeholder {
 textarea {
     display: block;
     padding: 1.2rem 1.5rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.9rem;
     resize: none;
     width: 100%;
     height: 202px;
@@ -586,17 +603,17 @@ textarea::placeholder {
 }
 
 .block-form-button {
-    max-width: 25rem;
+    max-width: 13.4rem;
     display: block;
     cursor: pointer;
-    padding: 1.15rem 1.5rem;
+    padding: 1.1rem 0%;
     width: 100%;
     border: none;
     border-radius: 0.5rem;
-    background-color: #d6564f;
-    color: #f48c8f;
+    background-color: #FBC65F;
+    color: #886A30;
     font-family: "Lato";
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     outline: none;
 }
@@ -765,7 +782,7 @@ textarea::placeholder {
 }
 
 .information-list-item.phone-item {
-    margin-bottom: 10px;
+    margin-bottom: 1.8rem;
 }
 
 .information-list-item-img {
@@ -850,122 +867,151 @@ textarea::placeholder {
 
 @media (max-width: 1019px) {
 
+    .services_wrap{
+        grid-template-columns: 1fr 1fr;
+        padding: 33px 30px 37px;
+    }
+    
 }
 
 @media (max-width: 768px) {
 
-.slider-container {
-    height: 58.7vw;
+    /*slider*/
+
+    .slider-container {
+        height: 59vw;
+    }
+
+    .slide__number-one {
+        padding: 15% 11% 5.2%;
+    }
+
+    .slide__number-two {
+        padding: 15% 11% 5.2%;
+    }
+
+    .slide__number-two img {
+        height: 363px;
+    }
+
+    .iphone_hor {
+        margin-left: 5.5rem;
+        height: 180px;
+        width: 363px;
+    }
+
+    .iphone_ver {
+        height: 363px;
+        width: 180px;
+    }
+
+    /*services*/
+
+    .services-wrapper{
+        height: 87.6vw;
+    }
+
+    .services_wrap{
+        grid-template-columns: 1fr 1fr;
+        padding: 3.1% 4% 0% 4%;
+    }
+
+    .services_title {
+        padding: 5.3% 0% 0% 5.3%;
+    }
+
+    .services_item {
+        width: 41vw;
+        height: 18.8vw;
+    }
+
+    .portfolio-subtitle {
+        padding: 1.5% 7.7% 1.5% 5.5%;
+        letter-spacing: 0px;
+        line-height: 3rem;
+    }
+
+    .portfolio_tags {
+        display: flex;
+        padding: 0% 3% 3.5% 5.3%;
+    }
+
+    .portfolio_work {
+        height: 100%;
+        max-height: 122vw;
+        overflow: hidden;
+        padding: 0% 5.2% 0.3%;
+    }
+
+
+    .portfolio_work_img {
+        margin-bottom: 2.6%;
+        max-width: 28vw;
+        max-height: 24.1vw;
+        overflow: hidden;
+    }
+
+
+    .about-us-wrapper {
+        padding: 7.3% 5.1% 4.4% 5.3%;
+    }
+
+    .about-us-tittle {
+        margin: 0% 0%;
+    }
+
+    .about-us-subtitle {
+        padding: 0% 2.7% 0.9% 0%;
+        letter-spacing: -0.1px;
+    }
+
+    .about-us-persons{
+        display: flex;
+    }
+
+    .person {
+        width: 33.3%;
+        margin-right: 2%;
+        height: 51.6vw;
+    }
+
+    .person-social-media {
+
+    margin: 6.9% 0% 0% 0%;
+    }
+
+    .person-name {
+        margin: 5.1% 0 0%;
+    }
+
+    .question-wrapper {
+        padding: 7.2% 5.4% 5% 5.4%;
+    }
+
+    .question-contact{
+        padding: 0% 0% 0% 0%;
+    } 
+
+    .question-subtitle {
+        margin: 3% 0% 3.6% 0%;
+    }
+
+    .contact-block-form {
+        padding-right: 1.7rem;
+    }
+
+    input {
+        margin-bottom: 3%;
+        padding: 2.5% 1.5% 2.5%;
+    }
+
+    textarea{
+        height: 20.4vw;
+        padding: 2% 2%;
+    }
+
 }
 
-.slider_wrap {
-    padding: 2% 3% 2% 3%;
-    /* height: 60vw; */
-}
-
-.arrow {
-    padding: 0px 3% 0 3%;
-}
-
-.iphone_hor {
-    margin-left: 5.8rem;
-}
-
-.services_wrap{
-    grid-template-columns: 1fr 1fr;
-    padding: 33px 30px 37px;
-}
-
-/*services*/
-
-.services-wrapper{
-    height: 87.9vw;
-}
-
-.services_wrap{
-    grid-template-columns: 1fr 1fr;
-    padding: 3% 4% 0% 4%;
-}
-
-.services_title {
-    padding: 5.6% 0% 0% 5.2%;
-}
-
-.services_item {
-    width: 41vw;
-    height: 18.8vw;
-}
-
-.portfolio-subtitle {
-    padding: 1.5% 7.7% 1.5% 5.5%;
-    letter-spacing: 0px;
-    line-height: 3rem;
-}
-
-.portfolio_tags {
-    display: flex;
-    padding: 0% 3% 3.5% 5.3%;
-}
-
-.portfolio_work {
-    max-height: 122vw;
-    overflow: hidden;
-    padding: 0% 5.2% 0.3%;
-}
-
-
-.portfolio_work_img {
-    margin-bottom: 2.6%;
-    max-width: 28vw;
-    max-height: 24.1vw;
-    overflow: hidden;
-}
-
-
-.about-us-wrapper {
-    padding: 7.3% 5.1% 5.2% 5.3%;
-}
-
-.about-us-tittle {
-    margin: 0% 0%;
-}
-
-.about-us-subtitle {
-    /* margin: 3% 0% 3%; */
-    padding: 0% 2.7% 0.9% 0%;
-    letter-spacing: -0.1px;
-    /* line-height: 3rem; */
-}
-
-.about-us-persons{
-    display: flex;
-}
-
-.person {
-    /* display: block; */
-    width: 33.3%;
-    margin-right: 2%;
-    height: 51.6vw;
-}
-
-.person-social-media {
-
-margin: 6.9% 0% 0% 0%;
-}
-
-.person-name {
-    margin: 5.1% 0 0%;
-}
-
-.question-wrapper {
-    padding: 6.4% 5% 0% 5.5%;
-}
-
-.question-title {
-    padding: 0% 0% 0% 0%;
-}
-
-}
 @media (max-width: 375px) {
 
     .services_wrap{
@@ -982,7 +1028,7 @@ margin: 6.9% 0% 0% 0%;
 
     .person {
         margin-bottom: 2rem;
-        min-width: 15rem;
+        min-width: 15vw;
     }
     
     }
